@@ -1,0 +1,150 @@
+@import "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: $fontBrother;
+}
+@mixin styleA ($size, $color:#1d1d1d){
+    color: $color;
+    text-decoration: none;
+    font-size: $size;
+}
+@mixin solution{
+    text-align: $txtAlign;
+    font-size: 28px;
+    padding: 131px 0;
+    color: $white;
+}
+
+
+
+ul, li{
+    display: block;
+}
+.logo, .menu {
+    padding: 15px 0;
+}
+
+
+.menu__item{
+    padding: 15px 0 15px 25px;
+
+    a{
+        @include styleA(14px);
+    }
+
+}
+
+.journal{
+    background: url('../img/slide1.png'), url('../img/slide1gr.png');
+    background-blend-mode: overlay;
+    height: 491px;
+    background-size: 100%;
+}
+.journal::after{
+    background-image: url(../img/slide1gr.png);
+}
+
+.digital-age{
+    color: $white;
+}
+.digital-age__title{
+    font-size: 45px;
+    margin-top: 150px;
+}
+.digital-age__text{
+    font-size: 19px;
+    margin-top: 30px;
+}
+.btn{
+    background-color: #eeab05;
+    border-radius: 10px;
+    margin-top: 35px;
+    a{
+        @include styleA(16px);
+    }
+}
+
+.sector{
+    background: #ededed;
+    padding: 40px 0 69px;
+}
+.title{
+    text-align: $txtAlign;
+    font-size: 35px;
+}
+.sector-title{
+    padding-bottom: 52px;
+}
+.solution__library{
+    background: url(../img/library.png);
+    @include solution();
+    line-height: 25px;
+    
+}
+.solution__univer{
+    background: url(../img/univer.png);
+    line-height: 25px;
+    @include solution();
+}
+.solution__group{
+    background: url(../img/group.png);
+    line-height: 25px;
+    @include solution();
+}
+// who-we-are
+.who-we-are{
+    background: url(../img/Rectangle12.png);
+    background-size: 100%;
+    padding: 45px 0 35px;
+}
+
+.sector-title__title, .sector-title__text, .counter__text{
+    color: $white;
+    text-align: center;    
+}
+
+.sector-title__text{
+    font-size: 20px;
+}
+
+.counter__num{
+    color: #eeab05;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: -10px;
+
+}
+//footer
+.footer{
+    background: #1d1d1d;
+    padding: 33px 0;
+}
+.footer-link, .website {
+    font-size: 14px;
+    color: $white;
+    a {
+        @include styleA(14px, $white);
+        margin-right: 22px;
+        &:hover{
+            color: #eeab05;
+        }
+    };
+    padding-top: 10px;
+
+}
+.icons{
+    a {
+        @include styleA(25px, $white);
+        margin-right: 20px;
+        &:hover{
+            color: #eeab05;
+        }
+    }
+}
+.yellow{
+    color: #eeab05;
+}
